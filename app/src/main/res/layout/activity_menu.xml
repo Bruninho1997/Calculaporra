@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bruno.calculaporrav2.MenuActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/principal"
+
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:text="@string/app_name_menu"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:typeface="monospace"
+                android:textSize="0.22in"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="@drawable/fundomenuoutros"
+                android:textAlignment="center"
+                />
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fundomenu">
+
+                <TextView
+                    android:layout_width="600px"
+                    android:layout_height="90px"
+                    android:text="FUNÇÕES NORMAIS"
+                    android:textSize="50px"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/fundomenu"
+                    android:textColor="#ffffff"
+                    android:typeface="monospace"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="100px"
+                    android:layout_height="30px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="Calculadora"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="40px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenu"
+                    android:onClick="calculadora"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="Raíz quadrada"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="40px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenu"
+                    android:onClick="raiz"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+
+                <Button
+                android:layout_width="420px"
+                android:layout_height="90px"
+                android:text="Fatorial"
+                    android:textSize="40px"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:background="@drawable/fundomenu"
+                android:onClick="fatorial"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+                <Button
+                android:layout_width="420px"
+                android:layout_height="90px"
+                android:text="Porcentagem"
+                    android:textSize="40px"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:background="@drawable/fundomenu"
+                android:onClick="porcentagem"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="100px"
+                android:layout_height="30px"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/fundomenuvermelho">
+
+            <TextView
+                android:layout_width="600px"
+                android:layout_height="90px"
+                android:text="QUALIDADE DE SOFTWARE"
+                android:textSize="42px"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/fundomenuvermelho"
+                android:textColor="#ffffff"
+                android:typeface="monospace"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="100px"
+                android:layout_height="30px"/>
+
+                <Button
+                android:layout_width="420px"
+                android:layout_height="90px"
+                android:text="Métricas KLOC/LOC"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                    android:textSize="40px"
+                android:layout_gravity="center"
+                android:background="@drawable/fundomenuvermelho"
+                android:onClick="metricaskloc"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="100px"
+                android:layout_height="30px"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fundomenu">
+
+                <TextView
+                    android:layout_width="600px"
+                    android:layout_height="90px"
+                    android:text="FÍSICA"
+                    android:textSize="55px"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/fundomenu"
+                    android:textColor="#ffffff"
+                    android:typeface="monospace"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="30px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="Velocidade Média"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="40px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenu"
+                    android:onClick="velocidademedia"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="100px"
+                android:layout_height="30px"/>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fundomenuvermelho">
+
+                <TextView
+                    android:layout_width="600px"
+                    android:layout_height="90px"
+                    android:text="MEDICINA"
+                    android:textSize="55px"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/fundomenuvermelho"
+                    android:textColor="#ffffff"
+                    android:typeface="monospace"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="30px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="IMC"
+                    android:textSize="45px"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenuvermelho"
+                    android:onClick="imc"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="100px"
+                android:layout_height="30px"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fundomenuoutros">
+
+                <TextView
+                    android:layout_width="580px"
+                    android:layout_height="90px"
+                    android:text="OUTROS"
+                    android:textSize="55px"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/fundomenuoutros"
+                    android:textColor="#ffffff"
+                    android:typeface="monospace"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="Configurações"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="45px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenuoutros"
+                    android:onClick="configuracoes"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="Novidades"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="45px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenuoutros"
+                    android:onClick="novidades"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="sobre"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="45px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenuoutros"
+                    android:onClick="sobre"/>
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

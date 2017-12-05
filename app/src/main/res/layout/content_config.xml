@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/principal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bruno.calculaporrav2.MainActivity"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/txtPrecisao"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="35px"
+                    android:textAlignment="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:text="Precisão dos resultados"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:id="@+id/config1low"
+                        android:background="#000000"
+                        android:onClick="config2low"
+
+
+                        android:text="BAIXO"/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+                 <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:textColor="#ffffff"
+                     android:textStyle="bold"
+                     android:background="#000000"
+                    android:onClick="config2med"
+                     android:id="@+id/config1med"
+
+
+                    android:text="MÉDIO"/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                  <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                      android:textColor="#ffffff"
+                      android:textStyle="bold"
+                      android:background="#000000"
+                    android:onClick="config2high"
+                      android:id="@+id/config1high"
+
+
+                    android:text="RECOMENDADO"/>
+
+                    </LinearLayout>
+
+                <View
+                android:layout_width="50px"
+                android:layout_height="50px"/>
+
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textAlignment="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="35px"
+                    android:id="@+id/txtNum1Resp"
+                    android:text=""/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:onClick="config1true"
+                        android:id="@+id/config2on"
+
+
+
+                        android:text="ON"/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:onClick="config1false"
+                        android:id="@+id/config2off"
+
+
+                        android:text="OFF"/>
+
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="50px"
+                    android:layout_height="50px"/>
+
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textAlignment="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="35px"
+                    android:id="@+id/txtNum1RespPorcentagem"
+                    android:text=""/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:onClick="config4true"
+                        android:id="@+id/config3on"
+
+
+
+                        android:text="ON"/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:id="@+id/config3off"
+                        android:onClick="config4false"
+
+
+                        android:text="OFF"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+                <View
+                    android:layout_width="50px"
+                    android:layout_height="50px"/>
+
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textAlignment="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="35px"
+
+                    android:text="Manter telas anteriores na memória"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:onClick="config5true"
+                        android:id="@+id/config4on"
+
+
+
+                        android:text="ON"/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:id="@+id/config4off"
+                        android:onClick="config5false"
+
+
+                        android:text="OFF"/>
+
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="50px"
+                    android:layout_height="50px"/>
+
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textAlignment="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="35px"
+
+                    android:text="Acessar o Menu ao iniciar"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:onClick="configMenutrue"
+                        android:id="@+id/configMenuon"
+
+
+
+                        android:text="ON"/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#000000"
+                        android:id="@+id/configMenuoff"
+                        android:onClick="configMenufalse"
+
+
+                        android:text="OFF"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+                <View
+                    android:layout_width="50px"
+                    android:layout_height="50px"/>
+
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="35px"
+                    android:text="PLANO DE FUNDO"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="@drawable/fundo"
+                        android:onClick="planoDeFundo1"
+
+
+
+
+                        android:text=""/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="@drawable/fundoverde"
+                        android:onClick="planoDeFundo2"
+
+
+
+
+                        android:text=""/>
+
+                    <View
+                        android:layout_width="50px"
+                        android:layout_height="50px"/>
+
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:background="#ffffff"
+                        android:onClick="planoDeFundo0"
+
+
+                        android:text=""/>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="50px"
+                android:layout_height="50px"/>
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VOLTAR PADRÃO"
+                    android:textSize="50px"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold|italic"
+                    android:background="#000000"
+                    android:textAlignment="center"
+                    android:onClick="restaurarPadrao"/>
+
+
+
+            </LinearLayout>
+            -->
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

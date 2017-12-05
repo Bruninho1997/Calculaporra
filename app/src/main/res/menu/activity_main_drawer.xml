@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="FUNÇÕES NORMAIS">
+
+            <menu>
+
+                <item
+                    android:id="@+id/calculadora"
+                    android:title="Calculadora" />
+
+
+                <item
+                    android:id="@+id/raiz"
+                    android:title="Raíz Quadrada" />
+
+                <item
+                    android:id="@+id/fatorial"
+                    android:title="Fatorial" />
+
+
+                <item
+                    android:id="@+id/porcentagem"
+                    android:title="Porcentagem" />
+
+
+
+
+            </menu>
+
+
+
+
+
+
+        </item>
+
+
+        <item android:title="QUALIDADE DE SOFTWARE">
+
+            <menu>
+
+                <item
+                    android:id="@+id/metricaLOC"
+                    android:title="Métricas KLOC/LOC" />
+
+
+
+
+
+            </menu>
+
+
+
+
+
+
+        </item>
+
+
+        <item android:title="FÍSICA">
+
+            <menu>
+
+
+                <item
+                    android:id="@+id/velocidadeMedia"
+                    android:title="Velocidade Média" />
+
+
+
+
+
+            </menu>
+
+
+
+
+
+
+        </item>
+
+
+        <item android:title="MEDICINA">
+
+            <menu>
+
+
+                <item
+                    android:id="@+id/imc"
+                    android:title="IMC" />
+
+
+
+
+
+            </menu>
+
+
+
+
+
+
+        </item>
+
+
+
+    </group>
+
+    <item android:title="OUTROS"
+        >
+        <menu>
+            <item
+                android:id="@+id/config"
+
+                android:title="Configurações" />
+
+            <item
+                android:id="@+id/atualizacoes"
+
+                android:title="Novidades" />
+
+            <item
+                android:id="@+id/sobre"
+
+                android:title="Sobre" />
+
+
+        </menu>
+    </item>
+
+
+</menu>

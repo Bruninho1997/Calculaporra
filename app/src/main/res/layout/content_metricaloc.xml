@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/principal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bruno.calculaporrav2.MainActivity"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:onClick="infoEsforco"
+                    android:text="Esforço"/>
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtEsforco"
+                    android:hint="Esforço"
+
+                    android:inputType="numberDecimal"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Valor em $"
+                    android:onClick="infoValor"
+
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDinheiro"
+                    android:textColor="#000000"
+                    android:hint="Valor em $"
+                    android:inputType="numberDecimal"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:onClick="infoKLOC"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="KLOC"
+                    />
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtKLOC"
+                    android:hint="KLOC"
+                    android:inputType="numberDecimal"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:onClick="infopags"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="pags.docum."
+                    />
+                <EditText
+                    android:textColor="#000000"
+                    android:hint="pags.docum."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPagsDoc"
+                    android:inputType="numberDecimal"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+                    android:onClick="infoErros"
+
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Erros"
+                    />
+                <EditText
+                    android:textColor="#000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtErros"
+                    android:hint="Erros"
+                    android:text=""
+                    android:inputType="numberDecimal"/>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="146dp"
+                android:layout_height="57dp"
+
+
+                android:background="@drawable/cal2"
+                android:id="@+id/button"
+                android:onClick="calcular"
+                android:layout_gravity="center_horizontal" />
+<View
+    android:layout_width="5px"
+    android:layout_height="5px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="30px"
+                    android:background="#ffffff"
+
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Correção = "
+                    />
+
+                <TextView
+                    android:background="#ffffff"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" 0 "
+                    android:textColor="#000000"
+
+                    android:id="@+id/correcao"
+                    />
+
+                <TextView
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="#000000"
+
+                    android:text=" Erros/KLOC"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="5px"
+                android:layout_height="5px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:background="#ffffff"
+                    android:textColor="#000000"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Custo por LOC = "
+
+                    />
+                <!-- Por Bruno Henrique -->
+
+                <TextView
+                    android:textSize="30px"
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" 0 "
+                    android:id="@+id/CustoLOC"
+                    />
+
+                <TextView
+                    android:textSize="30px"
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" $/LOC"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="5px"
+                android:layout_height="5px"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:background="#ffffff"
+                    android:textColor="#000000"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Documentação = "
+                    />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="30px"
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" 0 "
+                    android:id="@+id/txtdocumentacao"
+                    />
+
+                <TextView
+                    android:textSize="30px"
+                    android:textStyle="bold"
+
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" pags.docum./KLOC"
+                    />
+
+            </LinearLayout>
+            <!-- Por Bruno Henrique -->
+            <View
+                android:layout_width="5px"
+                android:layout_height="5px"/>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textColor="#000000"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Produtividade = "
+                    />
+
+                <TextView
+                    android:textColor="#000000"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" 0 "
+                    android:id="@+id/produtividade"
+                    />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="30px"
+                    android:textColor="#000000"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text=" KLOC/Esforço"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
