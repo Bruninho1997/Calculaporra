@@ -108,6 +108,12 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(it);
     }
 
+    public void pot (View view)
+    {
+        Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+        startActivity(it);
+    }
+
 
 
     public void sobre (View view)

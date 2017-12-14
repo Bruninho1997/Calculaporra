@@ -310,6 +310,13 @@ public class MainActivity extends AppCompatActivity
             //if (configu.configFinish==0)
             //finishAffinity();
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         }
         else if (id == R.id.sobre) {
             controleVersao controle = new controleVersao();

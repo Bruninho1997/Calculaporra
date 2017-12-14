@@ -120,6 +120,22 @@
                 android:background="@drawable/fundomenu"
                 android:onClick="porcentagem"/>
 
+
+                <View
+                    android:layout_width="0px"
+                    android:layout_height="15px"/>
+
+                <Button
+                    android:layout_width="420px"
+                    android:layout_height="90px"
+                    android:text="Potencialização"
+                    android:textSize="40px"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fundomenu"
+                    android:onClick="pot"/>
+
             </LinearLayout>
 
             <View

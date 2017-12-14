@@ -24,6 +24,10 @@
                     android:id="@+id/porcentagem"
                     android:title="Porcentagem" />
 
+                <item
+                    android:id="@+id/pot"
+                    android:title="Potencialização" />
+
 
 
 

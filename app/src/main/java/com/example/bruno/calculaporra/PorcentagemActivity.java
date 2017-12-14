@@ -159,6 +159,13 @@ public class PorcentagemActivity extends AppCompatActivity implements Navigation
             Toast toast = Toast.makeText(contexto, texto,duracao);
             toast.show();
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         } else if (id == R.id.velocidadeMedia) {
             Intent it = new Intent(this.getApplicationContext(),velocidadeMediaActivity.class);
             startActivity(it);

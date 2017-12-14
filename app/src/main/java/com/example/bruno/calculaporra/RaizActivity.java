@@ -101,7 +101,14 @@ public class RaizActivity extends AppCompatActivity implements NavigationView.On
             startActivity(it);
             if (configu.configFinish==0) finishAffinity();
 
-        } else if (id == R.id.porcentagem) {
+        } else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
+        }else if (id == R.id.porcentagem) {
             Intent it = new Intent(this.getApplicationContext(),PorcentagemActivity.class);
             startActivity(it);
             if (configu.configFinish==0)

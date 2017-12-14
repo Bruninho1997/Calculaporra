@@ -195,6 +195,13 @@ public class ImcActivity extends AppCompatActivity implements NavigationView.OnN
             Intent it = new Intent(this.getApplicationContext(),sobreAtualizacoesActivity.class);
             startActivity(it);
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         } else if (id == R.id.imc) {
 
             Intent it = new Intent(this.getApplicationContext(),ImcActivity.class);

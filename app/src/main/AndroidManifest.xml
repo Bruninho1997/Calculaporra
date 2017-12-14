@@ -35,7 +35,8 @@
         <activity
             android:name=".MenuActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ImcActivity"></activity>
+        <activity android:name=".ImcActivity" />
+        <activity android:name=".PotencializacaoActicity"></activity>
     </application>
 
 </manifest>

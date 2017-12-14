@@ -121,6 +121,13 @@ public class FatorialActivity extends AppCompatActivity implements NavigationVie
             startActivity(it);
             if (configu.configFinish==0) finishAffinity();
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         } else if (id == R.id.atualizacoes) {
             Intent it = new Intent(this.getApplicationContext(),sobreAtualizacoesActivity.class);
             startActivity(it);

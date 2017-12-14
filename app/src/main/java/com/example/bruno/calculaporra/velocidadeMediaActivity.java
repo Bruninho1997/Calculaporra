@@ -161,6 +161,13 @@ public class velocidadeMediaActivity extends AppCompatActivity implements Naviga
             if (configu.configFinish==0)
                 finishAffinity();
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         }else if (id == R.id.fatorial) {
             Intent it = new Intent(this.getApplicationContext(),FatorialActivity.class);
             startActivity(it);

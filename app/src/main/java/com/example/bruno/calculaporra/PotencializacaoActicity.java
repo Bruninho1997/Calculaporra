@@ -2,12 +2,12 @@ package com.example.bruno.calculaporra;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,11 +16,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import com.example.bruno.calculaporrav2.
+
 import static com.example.bruno.calculaporra.R.id.config;
-//import static com.example.bruno.calculaporrav2.R.id.config;
+import static com.example.bruno.calculaporra.R.id.txtnum2;
+import static com.example.bruno.calculaporra.R.id.txtresposta;
 
-public class CalculadoraActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+public class PotencializacaoActicity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
 
@@ -30,10 +32,11 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
     TextView txtresposta;
     EditText txtnum1;
     EditText txtnum2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculadora);
+        setContentView(R.layout.activity_potencializacao_acticity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().hide();
@@ -99,7 +102,7 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
     @SuppressWarnings("StatementWithEmptyBody")
 
-    @Override
+    //@Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
@@ -143,6 +146,13 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
             startActivity(it);
             if (configu.configFinish==0) finishAffinity();
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         } else if (id == R.id.porcentagem) {
             Intent it = new Intent(this.getApplicationContext(),PorcentagemActivity.class);
             startActivity(it);
@@ -153,15 +163,6 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
         else if (id == R.id.imc) {
 
             Intent it = new Intent(this.getApplicationContext(),ImcActivity.class);
-            startActivity(it);
-            if (configu.configFinish==0)
-            finishAffinity();
-
-        }
-
-        else if (id == R.id.pot) {
-
-            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
             startActivity(it);
             if (configu.configFinish==0)
                 finishAffinity();
@@ -201,7 +202,7 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
     }
 
 
-    public void somar (View view)
+    public void potencializar (View view)
     {
 
         ConfigActivity config = new ConfigActivity();
@@ -225,150 +226,41 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
             num2 = Double.parseDouble(txtnum2.getText().toString());
 
 
+        double aux = num1;
 
-        resposta = num1 + num2;
+        //resposta = num1 + num2;
+
+        for (int x=1; x<num2; x++)
+        {
+            num1 = num1*aux;
+        }
+
+        resposta = num1;
+
+        if (num2==0)
+        {
+            resposta =1;
+        }
 
 
 
 
         if (config.configDecimal == 1) {
-            txtresposta.setText(String.format("%.2f", resposta));
+            //txtresposta.setText(String.format("%.2f", resposta));
+            txtresposta.setText(String.format(String.valueOf(resposta)));
         }
 
         else if (config.configDecimal ==2)
-            txtresposta.setText(String.format("%.5f", resposta));
+            //txtresposta.setText(String.format("%.5f", resposta));
+            txtresposta.setText(String.format(String.valueOf(resposta)));
 
         else if (config.configDecimal ==3)
             txtresposta.setText(String.format(String.valueOf(resposta)));
 
         respostaTotal = resposta;
-        verConfig();
+        //verConfig();
 
     }
-
-    public void subtrair (View view)
-    {
-
-        ConfigActivity config = new ConfigActivity();
-
-
-        double num1= 0, num2 = 0, resposta = 0;
-        if (txtnum1.getText().toString().equals("")||txtnum1.getText().toString().equals("."))
-        {
-            num1=0;
-        }
-        else
-            num1 = Double.parseDouble(txtnum1.getText().toString());
-
-
-
-
-        if (txtnum2.getText().toString().equals("")||txtnum2.getText().toString().equals("."))
-        {
-            num2=0;
-        }
-        else
-            num2 = Double.parseDouble(txtnum2.getText().toString());
-
-        resposta = num1 - num2;
-
-        if (config.configDecimal == 1)
-            txtresposta.setText(String.format("%.2f", resposta));
-
-        else if (config.configDecimal ==2)
-            txtresposta.setText(String.format("%.5f", resposta));
-
-        else if (config.configDecimal ==3)
-            txtresposta.setText(String.format(String.valueOf(resposta)));
-
-        respostaTotal = resposta;
-        verConfig();
-
-    }
-
-    public void multiplicar (View view)
-    {
-        ConfigActivity config = new ConfigActivity();
-
-
-        double num1= 0, num2 = 0, resposta = 0;
-        if (txtnum1.getText().toString().equals("")||txtnum1.getText().toString().equals("."))
-        {
-            num1=0;
-        }
-        else
-            num1 = Double.parseDouble(txtnum1.getText().toString());
-
-
-
-
-        if (txtnum2.getText().toString().equals("")||txtnum2.getText().toString().equals("."))
-        {
-            num2=0;
-        }
-        else
-            num2 = Double.parseDouble(txtnum2.getText().toString());
-
-        resposta = num1 * num2;
-
-        if (config.configDecimal == 1)
-            txtresposta.setText(String.format("%.2f", resposta));
-
-        else if (config.configDecimal ==2)
-            txtresposta.setText(String.format("%.5f", resposta));
-
-        else if (config.configDecimal ==3)
-            txtresposta.setText(String.format(String.valueOf(resposta)));
-
-        respostaTotal = resposta;
-        verConfig();
-
-    }
-
-    public void dividir (View view)
-    {
-
-        ConfigActivity config = new ConfigActivity();
-
-
-
-        double num1= 0, num2 = 0, resposta = 0;
-        if (txtnum1.getText().toString().equals("")||txtnum1.getText().toString().equals("."))
-        {
-            num1=0;
-        }
-        else
-            num1 = Double.parseDouble(txtnum1.getText().toString());
-
-
-
-
-        if (txtnum2.getText().toString().equals("")||txtnum2.getText().toString().equals("."))
-        {
-            num2=0;
-        }
-        else
-            num2 = Double.parseDouble(txtnum2.getText().toString());
-
-        resposta = num1 / num2;
-
-        //txtnum1.setText(String.format("%.2f", resposta));
-        //txtnum2.setText(String.format("0"));
-
-        if (config.configDecimal == 1)
-        txtresposta.setText(String.format("%.2f", resposta));
-
-        else if (config.configDecimal ==2)
-            txtresposta.setText(String.format("%.5f", resposta));
-
-        else if (config.configDecimal ==3)
-            txtresposta.setText(String.format(String.valueOf(resposta)));
-
-        respostaTotal = resposta;
-        verConfig();
-
-    }
-
 
     public void verConfig()
     {
@@ -379,10 +271,12 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
         {
 
             if (config.configDecimal == 1)
-                txtnum1.setText(String.format("%.2f", resposta));
+                //txtnum1.setText(String.format("%.2f", resposta));
+                txtresposta.setText(String.format(String.valueOf(resposta)));
 
             else if (config.configDecimal ==2)
-                txtnum1.setText(String.format("%.5f", resposta));
+                //txtnum1.setText(String.format("%.5f", resposta));
+                txtresposta.setText(String.format(String.valueOf(resposta)));
 
             else if (config.configDecimal ==3)
                 txtnum1.setText(String.format(String.valueOf(resposta)));
@@ -397,7 +291,4 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
 
     }
-
-
 }
-

@@ -82,7 +82,9 @@ public class controleVersao {
 
                             "\n\n2.2.15 \nToast sugerindo alterar a tela inicial nas configurações ao clicar no botão azul do começo DEZLISE;" +
                             "\nAlteração da tela inicial padrão;" +
-                            "\nAlteração no background da tabela de resultados do IMC\n";
+                            "\nAlteração no background da tabela de resultados do IMC\n" +
+
+                            "\n\n2.2.16 \nAdição da POTENCIALIZAÇÃO";
 
 
 

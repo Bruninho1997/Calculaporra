@@ -132,6 +132,13 @@ public class ConfigActivity extends AppCompatActivity implements NavigationView.
             Intent it = new Intent(this.getApplicationContext(),sobreAtualizacoesActivity.class);
             startActivity(it);
 
+        }else if (id == R.id.pot) {
+
+            Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
+            startActivity(it);
+            if (configu.configFinish==0)
+                finishAffinity();
+
         }
 
 
