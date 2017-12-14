@@ -6,7 +6,7 @@ package com.example.bruno.calculaporra;
 
 public class controleVersao {
 
-    public String versao = "2.2.15";
+    public String versao = "2.2.16";
     public String mudancas =
                     "2.1.1 \nAdição de mais um background\n" +
 
