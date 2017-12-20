@@ -2,6 +2,7 @@ package com.example.bruno.calculaporra;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -258,8 +259,27 @@ public class PotencializacaoActicity extends AppCompatActivity implements Naviga
             txtresposta.setText(String.format(String.valueOf(resposta)));
 
         respostaTotal = resposta;
+        verResultadoSomOitoMil();
         //verConfig();
 
+    }
+
+    public void verResultadoSomOitoMil ()
+    {
+
+        if (respostaTotal>8000) {
+            MediaPlayer mp = MediaPlayer.create(PotencializacaoActicity.this, R.raw.oitomil);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+
+                    mp.release();
+                }
+
+            });
+            mp.start();
+        }
     }
 
     public void verConfig()

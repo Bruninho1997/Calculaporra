@@ -2,6 +2,7 @@ package com.example.bruno.calculaporra;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -148,6 +149,7 @@ public class FatorialActivity extends AppCompatActivity implements NavigationVie
 
 
 
+    double respostaPraVer;
     public void fatorial (View view)
     {
 
@@ -167,10 +169,30 @@ public class FatorialActivity extends AppCompatActivity implements NavigationVie
         }
 
 
+        respostaPraVer = resposta;
+        verResultadoSomOitoMil();
+
         txtresposta.setText(String.format("%.0f",resposta));
 
     }
 
+    public void verResultadoSomOitoMil ()
+    {
+
+        if (respostaPraVer>8000) {
+            MediaPlayer mp = MediaPlayer.create(FatorialActivity.this, R.raw.oitomil);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+
+                    mp.release();
+                }
+
+            });
+            mp.start();
+        }
+    }
 
     //AQUI ELE VERÁ O FUNDO
     View view;
