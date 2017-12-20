@@ -2,6 +2,7 @@ package com.example.bruno.calculaporra;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -194,6 +195,26 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
         return true;
     }
 
+    public void verResultadoSomOitoMil ()
+    {
+
+        if (respostaPraVer>8000) {
+            MediaPlayer mp = MediaPlayer.create(CalculadoraActivity.this, R.raw.oitomil);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+
+                    mp.release();
+                }
+
+            });
+            mp.start();
+        }
+    }
+
+
+    double respostaPraVer;
 
     public int verPrecisao()
     {
@@ -203,6 +224,7 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
     public void somar (View view)
     {
+
 
         ConfigActivity config = new ConfigActivity();
 
@@ -231,6 +253,7 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
 
 
+
         if (config.configDecimal == 1) {
             txtresposta.setText(String.format("%.2f", resposta));
         }
@@ -243,6 +266,9 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
         respostaTotal = resposta;
         verConfig();
+
+        respostaPraVer = resposta;
+        verResultadoSomOitoMil();
 
     }
 
@@ -282,6 +308,8 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
             txtresposta.setText(String.format(String.valueOf(resposta)));
 
         respostaTotal = resposta;
+        respostaPraVer = resposta;
+        verResultadoSomOitoMil();
         verConfig();
 
     }
@@ -322,6 +350,9 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
         respostaTotal = resposta;
         verConfig();
+
+        respostaPraVer = resposta;
+        verResultadoSomOitoMil();
 
     }
 
@@ -366,6 +397,9 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
 
         respostaTotal = resposta;
         verConfig();
+
+        respostaPraVer = resposta;
+        verResultadoSomOitoMil();
 
     }
 

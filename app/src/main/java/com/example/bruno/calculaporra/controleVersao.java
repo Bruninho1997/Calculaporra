@@ -6,7 +6,7 @@ package com.example.bruno.calculaporra;
 
 public class controleVersao {
 
-    public String versao = "2.2.16";
+    public String versao = "2.2.17";
     public String mudancas =
                     "2.1.1 \nAdição de mais um background\n" +
 
@@ -84,7 +84,10 @@ public class controleVersao {
                             "\nAlteração da tela inicial padrão;" +
                             "\nAlteração no background da tabela de resultados do IMC\n" +
 
-                            "\n\n2.2.16 \nAdição da POTENCIALIZAÇÃO";
+                            "\n\n2.2.16 \nAdição da POTENCIALIZAÇÃO\n" +
+
+                            "\n\n2.2.17 \nAcrescentado efeito sonoro no MENU;\n" +
+                            "Acrescentado a fala 'É DE MAIS DE 8000' de Vegita\n";
 
 
 

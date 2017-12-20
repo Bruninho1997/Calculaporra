@@ -2,6 +2,7 @@ package com.example.bruno.calculaporra;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -56,60 +57,161 @@ public class MenuActivity extends AppCompatActivity {
 
     public void calculadora (View view)
     {
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),CalculadoraActivity.class);
         startActivity(it);
     }
 
     public void fatorial (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),FatorialActivity.class);
         startActivity(it);
     }
 
     public void raiz (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),RaizActivity.class);
         startActivity(it);
     }
 
     public void metricaskloc (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),metricaLOC.class);
         startActivity(it);
     }
 
     public void porcentagem (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),PorcentagemActivity.class);
         startActivity(it);
     }
 
     public void velocidademedia (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),velocidadeMediaActivity.class);
         startActivity(it);
     }
 
     public void configuracoes (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),ConfigActivity.class);
         startActivity(it);
     }
 
     public void novidades (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),sobreAtualizacoesActivity.class);
         startActivity(it);
     }
 
     public void imc (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),ImcActivity.class);
         startActivity(it);
     }
 
     public void pot (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         Intent it = new Intent(this.getApplicationContext(),PotencializacaoActicity.class);
         startActivity(it);
     }
@@ -117,7 +219,17 @@ public class MenuActivity extends AppCompatActivity {
 
 
     public void sobre (View view)
-    {
+    {MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+
+                mp.release();
+            }
+
+        });
+        mp.start();
         controleVersao controle = new controleVersao();
         String texto = "DEV : BRUNO HENRIQUE\nFUNDO : GABRYELLE FRANCISCA\nv" + controle.versao;
         Context contexto = getApplicationContext();
