@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         ConfigActivity config = new ConfigActivity();
 
 
+        config.configEfeito=0;
         config.configFinish = 0;
         config.configResposta=1;
         config.configDecimal = 3;
@@ -152,6 +153,23 @@ public class MainActivity extends AppCompatActivity
             }
 
             config.configFundo = Integer.parseInt(temp);
+
+            fin.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            FileInputStream fin = openFileInput("configEfeito");
+            int c;
+            String temp="";
+            while( (c = fin.read()) != -1){
+                temp = temp + Character.toString((char)c); //Chamar a String na hora de exibir
+            }
+
+            config.configEfeito = Integer.parseInt(temp);
 
             fin.close();
         } catch (FileNotFoundException e) {

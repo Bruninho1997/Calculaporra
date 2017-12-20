@@ -198,7 +198,8 @@ public class CalculadoraActivity extends AppCompatActivity implements Navigation
     public void verResultadoSomOitoMil ()
     {
 
-        if (respostaPraVer>8000) {
+        ConfigActivity config = new ConfigActivity();
+        if (respostaPraVer>8000&&config.configEfeito==1) {
             MediaPlayer mp = MediaPlayer.create(CalculadoraActivity.this, R.raw.oitomil);
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 

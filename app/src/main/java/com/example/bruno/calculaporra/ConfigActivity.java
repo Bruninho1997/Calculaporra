@@ -31,6 +31,7 @@ public class ConfigActivity extends AppCompatActivity implements NavigationView.
     TextView txtnum1Resp;
     TextView txtnum1RespPorcentagem;
     TextView txtprecisao;
+    static int configEfeito = 0;
     static int configResposta=1;
     static int configRespostaPorcentagem=0;
     static int configDecimal=3;
@@ -158,6 +159,44 @@ public class ConfigActivity extends AppCompatActivity implements NavigationView.
 
         verconfig();
 
+
+    }
+
+    public void ligarEfeitos (View view)
+    {
+        configEfeito = 1;
+
+        salvarconfigEfeito();
+
+        verconfig();
+
+
+    }
+
+    public void desligarEfeitos (View view)
+    {
+        configEfeito = 0;
+
+        salvarconfigEfeito();
+
+        verconfig();
+
+
+    }
+
+    public void salvarconfigEfeito()
+    {
+        String filename = "configEfeito";
+        String string = String.valueOf(configEfeito);
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -355,6 +394,7 @@ public class ConfigActivity extends AppCompatActivity implements NavigationView.
         verconfigFinish();
         verconfigMenu();
         alterarFundo();
+        verconfigEfeito();
 
 
 
@@ -488,6 +528,30 @@ public class ConfigActivity extends AppCompatActivity implements NavigationView.
 
         }
         if (configMenu==0)
+        {
+            //txtnum1Resp.setText(String.format("Resposta ir para Número 1 na Calculadora"));
+            view11.setBackgroundResource(R.drawable.fundovermelho);
+            view10.setBackgroundResource(R.drawable.fundopreto);
+
+        }
+
+
+    }
+
+    public void verconfigEfeito()
+    {
+        view10 = findViewById(R.id.configEfeitoon);
+        view11 = findViewById(R.id.configEfeitooff);
+
+
+        if (configEfeito==1)
+        {
+            //txtnum1Resp.setText(String.format("Resposta ir para Número 1 na Calculadora"));
+            view10.setBackgroundResource(R.drawable.fundovermelho);
+            view11.setBackgroundResource(R.drawable.fundopreto);
+
+        }
+        if (configEfeito==0)
         {
             //txtnum1Resp.setText(String.format("Resposta ir para Número 1 na Calculadora"));
             view11.setBackgroundResource(R.drawable.fundovermelho);

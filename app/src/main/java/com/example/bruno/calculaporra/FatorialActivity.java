@@ -179,7 +179,8 @@ public class FatorialActivity extends AppCompatActivity implements NavigationVie
     public void verResultadoSomOitoMil ()
     {
 
-        if (respostaPraVer>8000) {
+        ConfigActivity config = new ConfigActivity();
+        if (respostaPraVer>8000&&config.configEfeito == 1) {
             MediaPlayer mp = MediaPlayer.create(FatorialActivity.this, R.raw.oitomil);
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 

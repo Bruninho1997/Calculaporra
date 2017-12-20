@@ -131,16 +131,21 @@ public class MenuActivity extends AppCompatActivity {
 
     public void fazerSom ()
     {
-        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
-            @Override
-            public void onCompletion(MediaPlayer mp) {
+        ConfigActivity config = new ConfigActivity();
 
-                mp.release();
-            }
+        if (config.configEfeito ==1) {
+            MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.ring);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
-        });
-        mp.start();
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+
+                    mp.release();
+                }
+
+            });
+            mp.start();
+        }
     }
 }

@@ -6,7 +6,7 @@ package com.example.bruno.calculaporra;
 
 public class controleVersao {
 
-    public String versao = "2.2.17b";
+    public String versao = "2.2.18";
     public String mudancas =
                     "2.1.1 \nAdição de mais um background\n" +
 
@@ -90,7 +90,10 @@ public class controleVersao {
                             "Acrescentado a fala 'É DE MAIS DE 8000' de Vegita\n" +
 
                             "\n\n2.2.17b \n" +
-                            "Acrescentado mais falas 'É DE MAIS DE 8000' de Vegita em diversas telas\n";
+                            "Acrescentado mais falas 'É DE MAIS DE 8000' de Vegita em diversas telas\n"+
+
+                            "\n\n2.2.18 \n" +
+                            "Usuário pode ativar/desativar efeitos sonoros nas configurações\n";
 
 
 
